@@ -1,30 +1,172 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мой сайт</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      text-align: center;
-    }
-    h1 {
-      color: #534AB7;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caroline — UI/UX дизайнер</title>
+<meta name="description" content="Портфолио Caroline — UI/UX дизайнер. Проектирование мобильных приложений и дизайн-систем.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
-    <h1>Привет! Это мой сайт 👋</h1>
-    <p>Скоро здесь будет портфолио</p>
+
+<!-- Сигнатурная линейка-измеритель, идёт вдоль всей страницы -->
+<div class="ruler" aria-hidden="true">
+  <div class="ruler-track">
+    <div class="ruler-indicator" id="rulerIndicator"></div>
   </div>
+</div>
+
+<header class="site-header">
+  <a href="#top" class="logo">C.<span>arolineam</span></a>
+  <nav class="nav">
+    <a href="#work" data-nav>Работы</a>
+    <a href="#process" data-nav>Процесс</a>
+    <a href="#toolkit" data-nav>Инструменты</a>
+    <a href="#contact" data-nav>Контакты</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <p class="eyebrow">UI / UX дизайнер · мобильные продукты и дизайн-системы</p>
+    <h1 class="hero-title">
+      Проектирую интерфейсы,<br>
+      которые <em>держат форму</em><br>
+      от первого экрана до релиза.
+    </h1>
+    <p class="hero-sub">
+      Собираю продукты с нуля: от исследования и структуры экранов
+      до токенов, компонентов и готовой к разработке дизайн-системы.
+    </p>
+    <div class="hero-actions">
+      <a href="https://behance.net/carolineam" target="_blank" rel="noopener" class="btn btn-primary">Смотреть Behance</a>
+      <a href="#work" class="btn btn-ghost">Кейсы ниже ↓</a>
+    </div>
+  </section>
+
+  <section class="work" id="work">
+    <p class="section-label">01 — Работы</p>
+
+    <article class="case reveal">
+      <div class="case-media" style="--case-accent:#534AB7;">
+        <span class="case-tag">Mobile App</span>
+        <div class="swatch-row">
+          <span class="swatch" style="background:#534AB7"></span>
+          <span class="swatch" style="background:#EDEBF6"></span>
+          <span class="swatch" style="background:#1D1A24"></span>
+        </div>
+      </div>
+      <div class="case-body">
+        <h2>Pawly</h2>
+        <p class="case-role">Дизайн-система · UX-копирайтинг · мобильный интерфейс</p>
+        <p class="case-desc">
+          Приложение для заботы о питомцах: календарь, здоровье, AI-ассистент
+          и профиль. Спроектировала полную дизайн-систему — от токенов отступов
+          и типографической шкалы до именования стилей — и написала интерфейсный
+          текст для каждого экрана.
+        </p>
+        <ul class="case-specs">
+          <li><span>Ширина макета</span><b>390px</b></li>
+          <li><span>Шрифт</span><b>Lato</b></li>
+          <li><span>Акцент</span><b>#534AB7</b></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="case reveal">
+      <div class="case-media" style="--case-accent:#C9A227;">
+        <span class="case-tag">E-commerce</span>
+        <div class="swatch-row">
+          <span class="swatch" style="background:#C9A227"></span>
+          <span class="swatch" style="background:#F5EFDD"></span>
+          <span class="swatch" style="background:#1D1A24"></span>
+        </div>
+      </div>
+      <div class="case-body">
+        <h2>Enroush</h2>
+        <p class="case-role">Редизайн виджета · HTML/CSS/JS</p>
+        <p class="case-desc">
+          Пересобрала виджет карточки товара под новую структуру скидок —
+          разовая 35% и подписка 50%. Задача решалась на стыке дизайна
+          и вёрстки: логика состояний была важнее декоративных деталей.
+        </p>
+        <ul class="case-specs">
+          <li><span>Тип задачи</span><b>Редизайн</b></li>
+          <li><span>Стек</span><b>HTML/CSS/JS</b></li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="process" id="process">
+    <p class="section-label">02 — Процесс</p>
+    <ol class="process-list">
+      <li class="reveal">
+        <span class="process-index">01</span>
+        <div>
+          <h3>Исследование</h3>
+          <p>Разбираю задачу, продукт и пользователя до того, как открыть Figma.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="process-index">02</span>
+        <div>
+          <h3>Структура</h3>
+          <p>Строю карту экранов и логику состояний — где что происходит и почему.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="process-index">03</span>
+        <div>
+          <h3>Система</h3>
+          <p>Токены, компоненты, типографика — один язык на весь продукт.</p>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="process-index">04</span>
+        <div>
+          <h3>Передача в разработку</h3>
+          <p>Аннотирую макеты так, чтобы у разработчика не осталось вопросов.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="toolkit" id="toolkit">
+    <p class="section-label">03 — Инструменты</p>
+    <ul class="tag-cloud">
+      <li>Figma</li>
+      <li>Figma Variables</li>
+      <li>Adobe Photoshop</li>
+      <li>Adobe Illustrator</li>
+      <li>Дизайн-системы</li>
+      <li>UX-копирайтинг</li>
+      <li>Прототипирование</li>
+      <li>HTML / CSS / JS</li>
+      <li>Google Workspace</li>
+    </ul>
+  </section>
+
+  <section class="contact" id="contact">
+    <p class="section-label">04 — Контакты</p>
+    <h2 class="contact-title">Открыта к новым проектам<br>и предложениям о работе.</h2>
+    <div class="contact-links">
+      <a href="https://behance.net/carolineam" target="_blank" rel="noopener">Behance ↗</a>
+      <a href="mailto:hello@example.com">hello@example.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>Caroline, UI/UX Design</span>
+  <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
